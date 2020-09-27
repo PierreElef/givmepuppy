@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+        <h2>Race : {{breed}}</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a routerLink="/breeds">Nouvelle Recherche</a>
+    </div>
+    <div class="col-12">
+      Nombre d'image :
+      <input type="number" [(ngModel)]="nbrImages" min=1 max={{maxImages}} (input)="onChangeNbrImages()">
+    </div>
+    <div class="col-12 py-2">
+      <div class="row justify-content-center">
+        <div *ngFor="let imageSource of imagesFilter" class="col-4 text-center">
+            <figure class="figure w-100">
+              <img src="{{imageSource}}" >
+            </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
